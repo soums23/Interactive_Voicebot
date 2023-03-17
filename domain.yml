@@ -1,0 +1,156 @@
+version: "3.1"
+actions:
+  - utter_default
+  - utter_play_song
+  - utter_song_not_found
+  - action_play_song
+  - utter_play_station
+  - utter_sunroof
+  - utter_navigation
+  - utter_noclass
+  - utter_location
+  - action_weather
+  - utter_parking
+  - utter_charging
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - play_song
+  - station
+  - sunroof
+  - AC
+  - navigation
+  - noclass
+  - weather
+  - parking
+  - charging
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, trained by Mercedes Benz Research and Development India."
+  utter_play_song:
+  - text: "Here is your song"
+  utter_play_station:
+  - text: playing station
+  utter_sunroof:
+  - text: sunroof
+  utter_AC:
+  - text: AC
+  utter_navigation:
+  - text: navigation
+  utter_noclass:
+  - text: Sorry!! I don't understand
+  utter_location:
+  - text: "Please tell me the city name?"
+  utter_parking:
+  - text: your problem with parking is noted Our representitive will resolve it shortly
+  utter_charging:
+  - text: your problem with charging is noted our representitive will resolve it shortly 
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+entities:
+  - song
+  - station
+  - artist
+  - album
+  - source
+  - destination
+  - sunroo
+  - location
+
+slots:
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+  song:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: song
+  artist:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: artist
+  album:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: album
+  station:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: station
+
+  source:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: source
+
+  destination:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: destination
+    
+templates:
+  utter_play_song:
+  - text: Here's your song
+  utter_sunroof:
+  - text: sunroof
+  utter_play_station:
+  - text: playing station
+  utter_song_not_found:
+  - text: I coudn't find the song
+  - text: The song isn't available online at the moment
+  utter_default:
+  - text: I couldn't understant. Can you please repeat what you said?
+  - text: Can you please repeat? I couldn't understand.
+  - text: I'm sorry. I couldn't understand. Please repeat?
+  - text: Uhhh my bad. I couldn't understand. Please repeat?
+
+  utter_AC:
+  - text: AC
+
+  utter_navigation:
+  - text: navigation
+
+  utter_noclass:
+  - text: Sorry!! I don't understand
+
+  utter_parking:
+  - text: your problem with parking is noted Our representitive will resolve it shortly
+
+  utter_charging:
+  - text: your problem with charging is noted our representitive will resolve it shortly 

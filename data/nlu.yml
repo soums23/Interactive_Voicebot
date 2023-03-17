@@ -1,0 +1,584 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- synonym: song
+  examples: |
+    - music
+
+- synonym: station
+  examples: |
+    - radio
+    - radio station
+    - FM
+    - channel
+- synonym : AC
+    - air conditioner
+    - conditioner
+
+- synonym : sunroof
+  examples: |
+    - sun roof
+
+- intent: play_song
+  examples: |
+    - Play [Yellow Submarine](song)
+    - Play [So What](song)
+    - Play [A Night at the Opera](song)
+    - I want to listen to [Madonna](song)
+    - I'd like to hear [Ludwig van Beethoven](song)
+    - I would like to search for the song [Sailing](song)
+    - Search for song [A Night at the Opera](song)
+    - I would like to search for the song [Elton John](song)
+    - Search for music [Beethoven](song)
+    - Play songs of [The Weeknd](song)
+    - Play some [Smooth Jazz](song)
+    - Play [HER LOSS](song)
+    - Search for the song [Chris Brown](song)
+    - Play [Kill Bill](song)
+    - Search for the mixtape [Drowning](song)
+    - Play [The Box](song)
+    - Play songs [Alesso](song)
+    - Play [Flowers](song)
+    - Play [Rich Flex](song)
+    - play [give me some sunshine](song)
+    - I want some music
+    - Play some hard music
+    - Play [senorita](song)
+    - Play [shape of you](song)
+    - can you please run the song [despacito](song)
+    - please play [dar de disco](song)
+    - i want to listen to [tujhe dekha toh ye jana sanam](song)
+    - Play [dil dhadhakne do](song)
+    - Play [ye dil ha muskil](song)
+    - play [kabhi kushi kabhi gum](song)
+    - play [kabhi alvida na kehena](song)
+    - play [akhiyo se goli mare](song)
+    - play [humare hawale watan sathiyo](song)
+    - play [dil toh pagla ha zi](song)
+    - play [tera mann](song)
+    - play [hum hya rahi pyar k](song)
+    - play [life](song)
+    - play [ye dil hya muskil](song)
+    - play [kabhi alvida na kahena](song)
+    - play [despacito](song)
+    - play [darar](song)
+    - play [kasam se](song)
+    - I would like to search for the song [dil se](song)
+    - I would like to search for the song [ek ajnabi](song)
+    - I would like to search for the song [colourful eyes](song)
+    - I would like to search for the song [my man oh my man](song)
+    - I would like to search for the song [hum dil de diya ha](song)
+    - I would like to search for the song [jhalak dik laja](song)
+    - I would like to search for the song [salam rocky bhai](song)
+    - I would like to search for the song [oh my love](song)
+    - I want to listen to [kata laga](song)
+    - I want to listen to [butterfly](song)
+    - I want to listen to [closer](song)
+    - I want to listen to [how i met my man](song)
+    - I want to listen to [dum maro dum](song)
+    - I want to listen to [ye dil hya muskil](song)
+    - I want to listen to [sunshine](song)
+    - play the song [hum apke ha](song)
+    - play the song [cheap thrills](song)
+    - play the song [mission impossible theme](song)
+    - play the song [marshmallow](song)
+    - i would like to listen to [love is in the air](song)
+    - i would like to listen to [fall in love someday](song)
+- intent: AC
+  examples: |
+    - Turn on the AC
+    - Start AC
+    - start the AC
+    - switch on the right side AC
+    - switch on the driver AC
+    - please begin the AC
+    - I am not liking the AC turn it off
+    - AC can you please cool me
+    - Turn on the AC
+    - Start AC
+    - start the AC
+    - switch on the right side AC
+    - switch on the driver AC
+    - please begin the AC
+    - I am not liking the AC turn it off
+    - AC can you please cool me
+    - Turn on the AC
+    - Start AC
+    - start the AC
+    - switch on the right side AC
+    - switch on the driver AC
+    - please begin the AC
+    - I am not liking the AC turn it off
+    - AC can you please cool me
+- intent: station
+  examples: |
+    - I would like to select station [Cool FM](station)
+    - Go to station/radio frequency [eighty seven point five megahertz](station)
+    - Make [eighty seven point five megahertz](station) radio station as Favourite
+    - I would like to select station [Radio One](station)
+    - Play radio station [Radio Mirchi](station)
+    - Pause radio station [Radio Mirchi](station)
+    - Play station [one hundred four point five nine](station)
+    - What's happening in the station [Friends FM](station)
+    - [two point five seven](station) on
+    - What is the program currently running in [FM](station)
+    - suggest me some good radio station
+    - play a good radio station for me
+    - play the station [cool FM](station)
+    - i would like to listen to the station [modolo FM](station)
+    - play station[one zero four point five nine](station)
+    - what's happening in the station [Smart FM](station)
+    - play the station [moody FM](station)
+    - play FM [local FM](station)
+    - play [bangalore FM](station) FM
+    - play station [Bindass FM](station) radio
+    - play the default FM radio station
+    
+- intent: sunroof
+  examples: |
+    - Open [sunroof](sunroo)
+    - I dont like the temperature open the [sunroof](sunroo)
+    - slide the [sunroof](sunroo)
+    - Hey [sunroof](sunroo), give me some sun bath
+    - Turn on the [sunroof](sunroo)
+    - Hey [sunroof](sunroo) open yourself
+    - Initiate [sunroof](sunroo)
+    - [sunroof](sunroo)
+    - [sunroof](sunroo) please open yourself
+    - switch on the [sunroof](sunroo)
+    - [sunroof](sunroo) open
+    - I dont like the temperature open the [sunroof](sunroo)
+    - slide the [sunroof](sunroo)
+    - Hey [sunroof](sunroo), give me some sun bath
+    - Turn on the [sunroof](sunroo)
+    - Hey [sunroof](sunroo) open yourself
+    - Initiate [sunroof](sunroo)
+    - [sunroof](sunroo)
+    - [sunroof](sunroo) please open yourself
+    - switch on the [sunroof](sunroo)
+    - [sunroof](sunroo) open
+    - Open [sunroof](sunroo)
+    - I dont like the temperature open the [sunroof](sunroo)
+    - slide the [sunroof](sunroo)
+    - Hey [sunroof](sunroo), give me some sun bath
+    - Turn on the [sunroof](sunroo)
+    - Hey [sunroof](sunroo) open yourself
+    - Initiate [sunroof](sunroo)
+    - [sunroof](sunroo)
+    - [sunroof](sunroo) please open yourself
+    - switch on the [sunroof](sunroo)
+    - [sunroof](sunroo) open
+    - I dont like the temperature open the [sunroof](sunroo)
+    - slide the [sunroof](sunroo)
+    - Hey [sunroof](sunroo), give me some sun bath
+    - Turn on the [sunroof](sunroo)
+    - Hey [sunroof](sunroo) open yourself
+    - Initiate [sunroof](sunroo)
+    - [sunroof](sunroo)
+    - [sunroof](sunroo) please open yourself
+    - switch on the [sunroof](sunroo)
+    - [sunroof](sunroo) open
+
+- intent: navigation
+  examples: |
+    - show me the nearest railway station
+    - What is the next station
+    - Take me to the nearest station
+    - This is the station i wanted
+    - show me near by restraunts
+    - show me near by cafes
+    - show me near by roof top cafe
+    - Take me from [Mumbai](source) to [Kolkata](destination)
+    - Take me to [Delhi](destination)
+    - Where is [Marathalli](destination)
+    - How far is [Kadugodi](destination)
+    - What is the distance between [Delhi](source) to [Chennai](destination)
+    - How far is [kolkata](destination)
+    - distance between [my current location](source) and [kadugodi](destination)
+    - Tell me the distance between [BTG](source) and [EC](destination)
+    - show me some car showrooms near by
+    - how to reach to [bangalore](destination)
+    - how far is the nearest hospital from me
+    - how far is [bermuda triangle](destination)
+    - how far is [railway colony delhi](destination)
+    - Tell me the nearest staion
+    - Set a route to the nearest station
+    - Take me to Barbeque Nation(destination)
+    - Show me nearby resorts
+    - Show me nearby 5 star restaurants
+    - show me nearby supermarkets
+    - take me to the nearest Dmart
+    - show me nearby pubs
+    - Take me from [Mumbai](source) to [Kolkata](destination)
+    - Take me from [Bengaluru](source) to [Mysore](destination)
+    - Take me to [Mumbai](destination)
+    - Take me to [Chennai](destination)
+    - Where is [Hosur](destination)
+    - Where is [KR Puram](destination)
+    - How far is [BTM Layout](destination)
+    - How far is [Devanahalli](destination)
+    - What is the distance between [Delhi](source) to [Chennai](destination)
+    - What is the distance between [Shimla](source) to [Ladakh](destination)
+    - How far is [Manipal](destination)
+    - How far is [Delhi](destination)
+    - distance between [my current location](source) and [hebbal](destination)
+    - distance between [my current location](source) and [btm layout](destination)
+    - Tell me the distance between [Manyata Tech Park](source) and [Bagmane Tech Park](destination)
+    - Tell me the distance between [Prestige Shantiniketan](source) and [Airport](destination)
+    - show me some car showrooms near HSR Layout
+    - Set route to nearest hospital
+    - Set route to nearest railyway station
+    - Set route to nearest metro station
+    - take me to [mexico](destination)
+    - take me to [salt lake](destination)
+    - how far is [coimbatore](destination)
+    - how to go to [west europe](destination)
+    - take me to [london](destination)
+    - how i can go to [sudan](destination)
+    - show me the path to [kadugodi](destination)
+    - how far is [jeevan deep](destination)
+    - take me to [london](destination)
+    - how to go to [cape town](destination)
+    - take me to [sanghai](destination)
+    - route to [park street](destination)
+    - how far is [vydehi hospital](destination)
+    - shortest way to [esplanade busstand](destination)
+    - how to reach [kundalahalli gate](destination)
+    - take me to [college square](destination)
+    - find a way to reach [tank more](destination)
+    - take me to the nearby park
+    - route to [mizoram](destination)
+    - way to [midnapore](destination)
+    - route to [mahesmati](destination)
+    - show me the route to [park street](destination)
+    - find me a route to [wakanda](destination)
+    - take me to [brisbane](destination)
+    - how far is [tomluk](destination)
+    - take me to [tollygunge](destination)
+    - how far is [aldorado](destination)
+    - can you please find me a way to reach to [Multan](destination)
+    - take me to [argentina](destination)
+    - distance to [kanha forest](destination)
+    - how to go to [jalpaiguri](destination)
+    - route to [ganga ghat](destination)
+    - show me all possible routes to [baguihati](destination)
+    - i want to reach to [murshidabad](destination)
+    - take me to [spain](destination)
+    - how far is [jublie hill](destination)
+    - show me the shortest path to [texas](destination)
+    - show me the path to [assam](destination)
+
+- intent: weather
+  examples: | 
+    - what is the weather at [sunnywale](location)
+    - how is the climate in [bengaluru](location)
+    - What is the temperature in [delhi](location)
+    - Tell me the current temperature in [lucknow](location)?
+    - I want to know weather in [noida](location)?
+    - Today weather in [bangalore](location)?
+    - How hot it is in (delhi)[location] today?
+    - How cold in (bangalore)[location] ?
+    - I am going outside today, what is the temperature in [Berlin](location)?
+    - What the weather feels like in [goa](location)?
+    - What the air feels in [shimla](location)?
+    - temperature in [finland](location)
+    - Will the weather fine in [mizoram](location)
+    - [saharanpur](location) temperature now
+    - tell me the weather of [berlin](location)
+    - how is the weather in [kaziranga](location)
+    - is it raining in [kolkata](location)
+    - is it cloudy in [kenya](location)
+    - is it sunny in [chennai](location)
+    - i want to know the weather of [shimla](location)
+    - tell me about the climate of [africa](location)
+    - temperature at [Tuljapur](location)
+    - how hot is [Mirzapur](location)
+    - how cold is [norway](location)
+    - tell me how sunny is [England](location)
+    - find the temperature of [Moscow](location)
+    - Temperature at [Kundalahalli](location)
+    - how is the temperature in [California](location)
+    - can you please inform me regarding the temperature at [Washinton](location)
+    - tell me the weather of [jammu](location)
+    - tell me how is the weather in [kashmir](location)
+    - weather at [honululu](location)
+    - temperature at [jaipur](location)
+    - how is the weather doing in [durgapur](location)
+    - how hot is [arab](location)
+    - tell me the weather of [columbo](location)
+    - how hot is [mirpur](location)
+    - weather of [bali](location)
+    - weather of [munnar](location)
+    - will it rain in [mysore](location) today
+    - tell me the weather of [bangalore](location)
+    - temperature of [delhi](location)
+    - update me the weather of [pune](location)
+    - is it raining in [hyderabad](location)
+    - update me about the weather of [aurangabad](location)
+    - weather update of [bangalore](location)
+    - climate of [latin america](location)
+    - how cold is [australia](location) now
+    - update me about the weather of [new zealand](location)
+    - weather of [haridwar](location)
+    - temperature of [berlin](location)
+    - climate of [argentina](location)
+    - What is the weather now?
+    - Tell me the temperature today?
+    - Weather right now
+    - temperature at the moment
+    - Present weather
+    - Present temperature
+    - Can you show me temperature
+    - is it sunny now?
+    - is the sky clear?
+    - will it rain today?
+    - how is the weather today
+    - can you please tell today's weather
+    - tell how is the weather today
+    - update me about today's weather
+    - what is the temperature today
+    - i want to know about today's temperature in [tokyo](location)
+    - how is the weather in [iran](location)
+    - tell me the weather in [seattle](location)
+    - what is the weather in [coimbatore](location)
+    - weather in [sydney](location)
+    - weather in [melbourne](location)
+    - weather in [capetown](location)
+    - what is the temperature in [Abu Dhabi](location)
+    - weather in [cuba](location)
+    - tell me how is the weather in [New York](location)
+    - how is the weather in [seoul](location)
+    - weather in [Buenos Aires](location)
+    - how is the weather in [Las Vegas](location)
+    - will it rain in [San Diego](location)
+    - weather in [Santa Cruz](location)
+    - weather in [Tel Aviv](location)
+    - how is the weather in [vatican city](location)
+    - tell me the weather in [california](location)
+    - how cold is [Kudremukh](location)
+    - i want to know the temperature of [Madikeri](location)
+    - hey i want the weather update of [raniganj](location)
+    - tell me how is the weather of [ooty](location)
+    - weather in [New Orleans](location)
+    - temperature at [noida](location)
+    - weather update of [rome](location)
+    - what is the weather in [paris](location)
+
+- intent: noclass
+  examples: |
+    - how is New York
+    - how is this place Pondicherry
+    - Who is better Ronaldo or Messi
+    - How to travel the world
+    - What is the process of photosynthesis
+    - How is a baby born
+    - Do aliens exist
+    - Who is Elon Mask
+    - What is the current score
+    - How to get a job
+    - Best college
+    - How world economy is shrinking
+    - What is India's current GDP
+    - what is theory of relativity
+    - Open facebook
+    - are there unicorns on mars
+    - How much money is too much money
+    - World's richest man
+    - why am i single
+    - ten best advice for a short trip
+    - recommend some tourist spots for vacation
+    - who is shraddha jain
+    - which film is getting oscar this year
+    - ten best selling book of this year
+    - best laptop under one lakh
+    - how to get into a relationship
+    - how to win friends and influence people
+    - is it safe to browse dark web
+    - Hey can you please talk to me
+    - May i know your name
+    - Where can we meet
+    - Let's go for a candle light dinner
+    - I love you 
+    - Do you love me
+    - I am cool
+    - I want an ice cream
+    - Let's play a game
+    - Let's play cricket
+    - play foosball with me
+    - Where is the sun
+    - near by day
+    - near by date
+    - tell me a joke
+    - marry me
+    - distance yourself
+    - what is euclidian distance
+    - what is the difference between distance and displacement
+    - Let's play badminton
+    - Let's play basket ball
+    - Let's play football
+    - play movie avengers
+    - play movie avengers
+    - play the movie kgf
+    - play movie kgf 2
+    - play the movie special twenty six 
+    - play the video game Halo
+    - play video game Halo
+    - play the video game Gee T A
+    - play video game Assasin Creed Syndicate
+    - play the video game Assasin Creed Rogue
+    - play movie doctor strange multiverse of madness
+    - play video game Age of Empires Definitive edition
+    - play some guitar
+    - play some paino
+    - play some drums
+    - play some vocal cords
+    - play some cringe 
+    - ouch
+    - two plus two 
+    - four minus five
+    - nine multiply twenty
+    - five hundred to the power two
+    - set subset superset differentiation intregation
+    - seventy five
+
+- intent: parking
+  examples: |
+    - I am facing some issue in the parking system
+    - i am not able to figure out what is wrong with parking system
+    - hey what's wrong with parking
+    - i am not able to park my car
+    - i am facing some parking related issues
+    - can you please fix my parking issue
+    - hey i am facing a problem with my parking system
+    - my parking is not working
+    - parking error
+    - what the hell is this parking system
+    - parking problems
+    - i can't park my car
+    - couldn't find the parking application
+    - parking problems 
+    - facing issues related to parking
+    - parking issue
+    - can't find the parking
+    - help me to park my car
+    - help me with parking
+    - i am not sure about the issue but i think my parking application is not working
+    - help me to park my car
+    - can't understand how to use this parking application
+    - facing some difficulty in parking my car
+
+- intent: charging
+  examples: |
+    - couldn't find a charging station nearby
+    - couldn't charge my car
+    - facing issue with charging
+    - charging problem
+    - charging error in my car
+    - how to charge my car
+    - charging stations not found
+    - my car is not charging
+    - help me in charging my car
+    - can you please help me in finding the right way of charging
+    - please help me to charge my car
+    - charging problem
+    - charge problem
+    - charging error
+    - issue related to charging
+    - i need help with charging my car
+    - help me in charging my car
+    - issues with charging my car
+    - can you please help me to find how to charge my car  
+    - it's taking too much time to charge my car
+    - finding some charging difficulties
+    - need help with charging
+
+
+     

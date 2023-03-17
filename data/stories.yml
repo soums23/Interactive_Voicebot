@@ -1,0 +1,94 @@
+version: "3.1"
+
+stories:
+- story: 
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+- story: song path 1
+  steps:
+    - intent: play_song
+    - action: utter_play_song
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+    
+- story: song path 2
+  steps:
+    - intent: play_song
+    - action: utter_play_song
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_goodbye
+
+- story: station path 1
+  steps:
+    - intent: station
+    - action: utter_play_station
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
+- story: station path 2
+  steps:
+    - intent: station
+    - action: utter_play_station
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_goodbye
+- story: sunroof 1 
+  steps:
+    - intent: sunroof
+    - action: utter_sunroof
+
+- story: AC 1
+  steps:
+    - intent: AC
+    - action: utter_AC
+
+- story: navigation 1
+  steps:
+    - intent: navigation
+    - action: utter_navigation
+
+- story: noclass 1
+  steps:
+    - intent: noclass
+    - action: utter_noclass
+- story: weather 1
+  steps:
+    - intent: weather
+    - action: action_weather
+
+- story: parking 1
+  steps:
+    - intent: parking
+    - action: utter_parking
+
+- story: charging 1
+  steps:
+  - intent: charging
+  - action: utter_charging
+   
